@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lnkup3"
+dynamic = ["version"]
+description = "LNK data exfiltration payload generator"
+readme = "README.md"
+authors = [{ name = "crypt0lith" }]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: POSIX",
+    "Environment :: Console",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = ["pylnk3"]
+
+[project.scripts]
+revshell = "lnkup3.__main__:main"
+
+[tool.setuptools_scm]
+write_to = "lnkup3/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lnkup3*"]
