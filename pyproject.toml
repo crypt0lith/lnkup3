@@ -18,7 +18,7 @@ classifiers = [
 dependencies = ["pylnk3"]
 
 [project.scripts]
-revshell = "lnkup3.__main__:main"
+lnkup3 = "lnkup3.__main__:main"
 
 [tool.setuptools_scm]
 write_to = "lnkup3/_version.py"
